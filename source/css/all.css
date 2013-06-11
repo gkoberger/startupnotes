@@ -1,3 +1,6 @@
-//= require "normalize.css"
-//= require "main.css"
+//= require "vendor/normalize.css"
+//= require "vendor/main.css"
+
+//= 'require "vendor/code.css"'
+
 //= require "style.css"

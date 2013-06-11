@@ -11,4 +11,7 @@ gem "stylus"
 
 gem 'middleman-s3_sync'
 
-gem "middleman-favicon-maker", "~> 3.2"
+gem "middleman-favicon-maker", "~>3.2"
+
+gem "middleman-syntax"
+gem "redcarpet"

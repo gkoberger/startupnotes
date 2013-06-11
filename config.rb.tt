@@ -74,6 +74,17 @@ end
 
 activate :directory_indexes
 
+# Markdown
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+# Code highlighting
+set :syntax, false # <-- Set to true to enable
+if syntax
+    activate :syntax
+end
+
+
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                = 'bucket.com' # The name of the S3 bucket you are targetting. This is globally unique.
   s3_sync.region                = 'us-west-1'     # The AWS region for your bucket.
