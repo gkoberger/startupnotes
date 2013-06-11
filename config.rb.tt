@@ -49,10 +49,13 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'
 
+Stylus.use :nib
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
+  # Stylus.compress = true
 
   # Minify Javascript on build
   activate :minify_javascript
