@@ -67,6 +67,9 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
+  # Favicon Maker
+  activate :favicon_maker
 end
 
 activate :directory_indexes
