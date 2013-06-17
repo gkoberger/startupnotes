@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Gregory Koberger -- @twitter 
 
 # TECHNOLOGY COLOPHON
 
