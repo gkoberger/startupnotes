@@ -1,6 +1,12 @@
-//= require "vendor/normalize.css"
-//= require "vendor/main.css"
+// Uncomment if you want HTML5 Boilerplate
+//= 'require vendor/normalize'
+//= 'require vendor/main'
 
-//= 'require "vendor/code.css"'
+// Bootstrap
+//= require vendor/bootstrap.min
+//= require vendor/bootstrap-theme.min
+//= require vendor/font-awesome.min
 
-//= require "style.css"
+//= 'require vendor/code.css'
+
+//= require style

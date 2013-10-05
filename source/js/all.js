@@ -1,3 +1,5 @@
-//= 'require "vendor/jquery.lightbox_me.js"'
-//= require "plugins.js"
-//= require "main.js"
+//= require vendor/bootstrap.min
+//= 'require vendor/jquery.lightbox_me'
+
+//= require plugins
+//= require main
