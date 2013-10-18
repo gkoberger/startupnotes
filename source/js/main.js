@@ -43,16 +43,27 @@ $(function() {
           }
         }
 
-        $('.person').each(function() {
-          /*
-          if($(this).data('page') * 1 >= (page - 1)) {
-            $('#people').addClass('active');
-            $('#people .on').removeClass('on');
-            $(this).addClass('on');
-            return false;
-          }
-          */
-        });
+
+        // Find the highest page that's <= page+1
+        
+        var $p;
+        var page_rounded = (Math.floor(page / 2) * 2) + 1; // Get the right page
+        console.log(page_rounded, book.turn('pages')-1);
+        if(page_rounded < book.turn('pages') - 1) {
+          $('.person').each(function() {
+            if($(this).data('page') * 1 <= page_rounded) {
+              $p = $(this);
+            }
+          });
+        }
+
+        if($p) {
+          $('#people').addClass('active');
+          $('#people .on').removeClass('on');
+          $p.addClass('on');
+        } else {
+          $('#people').removeClass('active');
+        }
 
         //updateDepth(book, page);
 
