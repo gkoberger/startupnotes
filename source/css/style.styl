@@ -63,8 +63,18 @@ greyish = #eee
       border 5px solid border-color
       background-color bg-color
       border-radius 12px 3px 3px 12px
-      box-shadow 5px 5px 0 shadow-color inset
+      box-shadow -5px 5px 0 shadow-color inset
       position relative
+      &:before
+        position absolute
+        top 0
+        right 25px
+        height 100%
+        width 10px
+        border-left 5px solid shadow-color
+        box-shadow -5px 5px 0 border-color inset
+        content " "
+        display block
     .inside
       width 340px
       height 465px
@@ -159,6 +169,7 @@ h1
     height 114px
     transition opacity 0.3s ease-out
     &:hover
+      cursor pointer
       text-decoration none
       opacity 1
       .person-parent 
