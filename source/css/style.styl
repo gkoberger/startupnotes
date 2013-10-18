@@ -5,6 +5,12 @@ greyish = #eee
 *, *:before, *:after
   box-sizing border-box
 
+.unloaded
+  .moleskine-parent
+    transform translateY(-100px)
+  .info
+    transform translateX(-100px)
+
 .pg4
   width 344px
   height 475px
@@ -86,10 +92,12 @@ greyish = #eee
     padding 20px
     position relative
     z-index 20
+    transition 0.5s ease-out
     &.open
       position static
       z-index 0
   .moleskine-parent
+    transition 0.5s ease-out
     width 350px
     left 0
     position absolute

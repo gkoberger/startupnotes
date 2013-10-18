@@ -1,3 +1,7 @@
+$(window).load(function() {
+  $('body').removeClass('unloaded');
+});
+
 $(function() {
   $(window).resize(function() {
     $('#content').height($(window).height());
