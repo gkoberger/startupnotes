@@ -120,11 +120,13 @@ $(function() {
 
   $('.arrow-right').click(function(e) {
     $m.turn('next');
+    $('.info, .share').addClass('open');
     e.preventDefault();
   });
 
   $('.arrow-left').click(function(e) {
     $m.turn('previous');
+    $('.info, .share').addClass('open');
     e.preventDefault();
   });
 
@@ -134,14 +136,12 @@ $(function() {
 
 		switch (e.keyCode) {
 			case previous:
-
 				$m.turn('previous');
-
+        $('.info, .share').addClass('open');
 			break;
 			case next:
-				
 				$m.turn('next');
-
+        $('.info, .share').addClass('open');
 			break;
 		}
 
