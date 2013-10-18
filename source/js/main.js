@@ -15,6 +15,15 @@ $(function() {
   });
 
 	var $m = $("#moleskine");
+
+  function turned() {
+    var page = $m.turn('page');
+    $('.arrow-left').toggleClass('show', page > 1);
+    $('.arrow-right').toggleClass('show', page < $m.turn('pages'));
+
+    $('.info, .share').addClass('open');
+  };
+
   $m.turn({
 		width: 700,
 		height: 485,
@@ -26,11 +35,9 @@ $(function() {
     when: {
       first: function() {
         $('.info').removeClass('open');
-        $('.arrow-left').fadeOut();
       },
       last: function() {
         $('.share').removeClass('open');
-        $('.arrow-right').fadeOut();
       },
       end: function() {
         var book = $(this);
@@ -42,15 +49,8 @@ $(function() {
           $('.share').removeClass('open');
         }
       },
-      start: function() {
-        $('.info').addClass('open');
-        $('.share').addClass('open');
-      },
-      turned: function() {
-        var page = $(this).turn('page');
-        $('.arrow-left').toggleClass('show', page > 1);
-        $('.arrow-right').toggleClass('show', page < $(this).turn('pages'));
-      },
+      start: turned,
+      turned: turned,
       turning: function(e, page, view) {
         var book = $(this),
         currentPage = book.turn('page'),
@@ -120,13 +120,13 @@ $(function() {
 
   $('.arrow-right').click(function(e) {
     $m.turn('next');
-    $('.info, .share').addClass('open');
+    turned();
     e.preventDefault();
   });
 
   $('.arrow-left').click(function(e) {
     $m.turn('previous');
-    $('.info, .share').addClass('open');
+    turned();
     e.preventDefault();
   });
 
@@ -137,10 +137,11 @@ $(function() {
 		switch (e.keyCode) {
 			case previous:
 				$m.turn('previous');
-        $('.info, .share').addClass('open');
+        turned();
 			break;
 			case next:
 				$m.turn('next');
+        turned();
         $('.info, .share').addClass('open');
 			break;
 		}
@@ -148,6 +149,7 @@ $(function() {
 	});
 
   $('.person').click(function() {
+    turned();
     $m.turn('page', $(this).data('page') * 1);
     $('#people').addClass('active');
     $('#people .on').removeClass('on');
