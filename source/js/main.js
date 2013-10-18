@@ -16,12 +16,14 @@ $(function() {
 
 	var $m = $("#moleskine");
 
-  function turned() {
+  function turned(dont_open) {
     var page = $m.turn('page');
     $('.arrow-left').toggleClass('show', page > 1);
     $('.arrow-right').toggleClass('show', page < $m.turn('pages'));
 
-    $('.info, .share').addClass('open');
+    if(!dont_open) {
+      $('.info, .share').addClass('open');
+    }
   };
 
   $m.turn({
@@ -34,6 +36,7 @@ $(function() {
 
     when: {
       first: function() {
+        console.log('hell nah');
         $('.info').removeClass('open');
       },
       last: function() {
@@ -49,8 +52,8 @@ $(function() {
           $('.share').removeClass('open');
         }
       },
-      start: turned,
-      turned: turned,
+      start: function() { turned() },
+      turned: function() { turned(true) },
       turning: function(e, page, view) {
         var book = $(this),
         currentPage = book.turn('page'),
