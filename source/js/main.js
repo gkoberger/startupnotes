@@ -23,14 +23,23 @@ $(function() {
       first: function() {
         $('.info').removeClass('open');
       },
+      last: function() {
+        console.log('Last');
+        $('.share').removeClass('open');
+      },
       end: function() {
         var book = $(this);
         if(book.turn('page') <= 1) {
           $('.info').removeClass('open');
         }
+
+        if(book.turn('page') >= book.turn('pages')) {
+          $('.share').removeClass('open');
+        }
       },
       start: function() {
         $('.info').addClass('open');
+        $('.share').addClass('open');
       },
       turning: function(e, page, view) {
         var book = $(this),
@@ -65,7 +74,6 @@ $(function() {
         
         var $p;
         var page_rounded = (Math.floor(page / 2) * 2) + 1; // Get the right page
-        console.log(page_rounded, book.turn('pages')-1);
         if(page_rounded < book.turn('pages') - 1) {
           $('.person').each(function() {
             if($(this).data('page') * 1 <= page_rounded) {

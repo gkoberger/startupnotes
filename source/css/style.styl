@@ -27,6 +27,32 @@ greyish = #eee
   margin-top -323px
   left 50%
   margin-left -350px
+  hr
+    border-top 1px solid rgba(255,255,255,0.3)
+  .share
+    width 350px
+    color #fff
+    padding 100px 50px
+    position relative
+    z-index 20
+    position absolute
+    right 0
+    top 0
+    p
+      margin-bottom 8px
+    a
+      display block
+      color rgba(255,255,255,0.8)
+      padding 5px
+      &:hover
+        text-decoration none
+        color #fff
+    i
+      display inline-block
+      text-align center
+      width 14px
+    &.open
+      z-index 0
   .info
     width 350px
     color #fff
@@ -62,7 +88,7 @@ greyish = #eee
       border-left 0 solid
       height 100%
       background-image linear-gradient(right, #fff 95%, #dadada 100%)
-    .back-outside
+    .back-outside div
       width 350px
       height 485px
       border 5px solid border-color
@@ -146,7 +172,7 @@ greyish = #eee
   height 50px
   background-image url(../img/logo.png)
   background-size contain
-h1
+h1, h2
   font-size 30px
   font-family museo, serif
   strong
@@ -154,6 +180,9 @@ h1
     font-size 20px
     font-weight normal
     opacity 0.6
+h2
+  font-size 25px
+
 .byline
   color rgba(255,255,255,0.6)
   font-size 14px
