@@ -19,6 +19,31 @@ greyish = #eee
   position relative
   margin 0
 
+.arrow-right
+  right: -50px;
+  background-position -28px 0
+
+.arrow-left
+  left: -50px;
+
+.arrow-right, .arrow-left
+  display block
+  position absolute
+  top 50%
+  margin-top -22px
+  width 28px
+  height 44px
+  background-image url(../img/arrows.png)
+  background-size auto 44px
+  transition 0.3s ease-out
+  opacity 0
+  pointer-events none
+  &.show
+    opacity 0.5
+    pointer-events auto
+  &:hover
+    opacity 1
+
 #body
   width 700px
   height 485px

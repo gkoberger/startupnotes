@@ -22,10 +22,11 @@ $(function() {
     when: {
       first: function() {
         $('.info').removeClass('open');
+        $('.arrow-left').fadeOut();
       },
       last: function() {
-        console.log('Last');
         $('.share').removeClass('open');
+        $('.arrow-right').fadeOut();
       },
       end: function() {
         var book = $(this);
@@ -40,6 +41,11 @@ $(function() {
       start: function() {
         $('.info').addClass('open');
         $('.share').addClass('open');
+      },
+      turned: function() {
+        var page = $(this).turn('page');
+        $('.arrow-left').toggleClass('show', page > 1);
+        $('.arrow-right').toggleClass('show', page < $(this).turn('pages'));
       },
       turning: function(e, page, view) {
         var book = $(this),
@@ -107,6 +113,35 @@ $(function() {
       },
     }
   });
+
+  $('.arrow-right').click(function(e) {
+    $m.turn('next');
+    e.preventDefault();
+  });
+
+  $('.arrow-left').click(function(e) {
+    $m.turn('previous');
+    e.preventDefault();
+  });
+
+	$(document).keydown(function(e){
+
+		var previous = 37, next = 39;
+
+		switch (e.keyCode) {
+			case previous:
+
+				$m.turn('previous');
+
+			break;
+			case next:
+				
+				$m.turn('next');
+
+			break;
+		}
+
+	});
 
   $('.person').click(function() {
     $m.turn('page', $(this).data('page') * 1);
