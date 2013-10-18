@@ -11,6 +11,24 @@ greyish = #eee
   .info
     transform translateX(-100px)
 
+.pg2
+  border-radius 12px 0 0 12px
+  border 10px solid #333
+  border-right 0 solid
+  height 100%
+  background-image linear-gradient(left, #fff 95%, #dadada 100%)
+  > div
+    width 210px
+    height 224px
+    background-image url(../img/cover-back.png)
+    margin auto
+    margin-top 90px
+.pg3
+  width 210px
+  height 224px
+  background-image url(../img/cover-back.png)
+  margin auto
+  margin-top 90px
 .pg4
   width 344px
   height 475px
@@ -19,6 +37,12 @@ greyish = #eee
   width 344px
   height 475px
   background-image url(../img/demo2.png)
+.thankyou > div
+  width 153px
+  height 155px
+  background-image url(../img/back-thanks.png)
+  margin auto
+  margin-top 110px
 
 #content
   background-image linear-gradient(#d15c15, #bd5110)
@@ -92,12 +116,12 @@ greyish = #eee
     padding 20px
     position relative
     z-index 20
-    transition 0.5s ease-out
+    transition transform 0.5s ease-out
     &.open
       position static
       z-index 0
   .moleskine-parent
-    transition 0.5s ease-out
+    transition transform 0.5s ease-out
     width 350px
     left 0
     position absolute
@@ -105,25 +129,13 @@ greyish = #eee
     border-color = #262626
     bg-color = #474747
     shadow-color = #585656
-    .pg2
-      border-radius 12px 0 0 12px
-      border 10px solid #333
-      border-right 0 solid
-      height 100%
-      background-image linear-gradient(left, #fff 95%, #dadada 100%)
-      > div
-        width 210px
-        height 224px
-        background-image url(../img/cover-back.png)
-        margin auto
-        margin-top 90px
-    .back-inside div
+    .back-inside > div
       border-radius 0 12px 12px 0
       border 10px solid #333
       border-left 0 solid
       height 100%
       background-image linear-gradient(right, #fff 95%, #dadada 100%)
-    .back-outside div
+    .back-outside > div
       width 350px
       height 485px
       border 5px solid border-color
