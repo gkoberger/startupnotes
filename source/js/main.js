@@ -3,6 +3,13 @@ $(function() {
     $('#content').height($(window).height());
   }).trigger('resize');
 
+  var $b = $('body');
+  $('.moleskine').mousedown(function() {
+    $b.addClass('mousedown');
+  }).mouseup(function() {
+    $b.removeClass('mousedown');
+  });
+
 	var $m = $("#moleskine");
   $m.turn({
 		width: 700,
@@ -12,10 +19,20 @@ $(function() {
 		gradients: true,
 		duration: 1000,
 
-		//autoCenter: true
     when: {
+      first: function() {
+        $('.info').removeClass('open');
+      },
+      end: function() {
+        var book = $(this);
+        if(book.turn('page') <= 1) {
+          $('.info').removeClass('open');
+        }
+      },
+      start: function() {
+        $('.info').addClass('open');
+      },
       turning: function(e, page, view) {
-
         var book = $(this),
         currentPage = book.turn('page'),
         pages = book.turn('pages');

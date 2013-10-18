@@ -31,6 +31,11 @@ greyish = #eee
     width 350px
     color #fff
     padding 20px
+    position relative
+    z-index 20
+    &.open
+      position static
+      z-index 0
   .moleskine-parent
     width 350px
     left 0
@@ -84,6 +89,11 @@ greyish = #eee
          background-image linear-gradient(right, #fff 95%, #cacaca 100%)
     .page-wrapper
       perspective 2000px
+      cursor -webkit-grab
+      cursor -moz-grab
+      body.mousedown & 
+        cursor -webkit-grabbing
+        cursor -moz-grabbing
     .cover
       width 350px
       height 485px
