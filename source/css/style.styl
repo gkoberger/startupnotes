@@ -50,6 +50,8 @@ greyish = #eee
   top 50%
   position absolute
   margin-top -323px
+  @media screen and (max-height: 675px)
+    margin-top -285px
   left 50%
   margin-left -350px
   hr
@@ -222,6 +224,12 @@ h2
 #people
   background-color #ddd
   height 180px
+  @media screen and (max-width: 1525px)
+    height 138px
+  @media screen and (max-height: 675px)
+    height 78px
+  @media screen and (max-width: 1050px)
+    height 78px
   position absolute
   bottom 0
   left 0
@@ -256,18 +264,33 @@ h2
       height 180px
       overflow hidden
       width 100%
+      @media screen and (max-width: 1525px)
+        height 138px
+      @media screen and (max-width: 1050px)
+        height 78px
+      @media screen and (max-height: 675px)
+        height 78px
+
       .person-info
         height 66px
         padding-top 20px
+        @media screen and (max-width: 1050px)
+          display none
+        @media screen and (max-height: 675px)
+          display none
         .name
           text-align center
           color #555
           font-weight bold
           font-size 13px
+          @media screen and (max-width: 1525px)
+            font-size 11px
         .job
           text-align center
           color #AAA
           font-size 12px
+          @media screen and (max-width: 1525px)
+            font-size 10px
       span
         transition 0.3s ease-out
         image '../img/people.png'
@@ -275,35 +298,39 @@ h2
         background-size auto 124px !important
         display block
         margin auto
-  .chase span
-    width 90px
-    background-position 0 0
-  .nate span
-    width 127px
-    background-position -90px 0
-  .chris span
-    width 111px
-    background-position -222px 0
-  .jack span
-    width 125px
-    background-position -338px 0
-  .diane span
-    width 119px
-    background-position -470px 0
-  .phil span
-    width 134px
-    background-position -603px 0
-  .dan span
-    width 132px
-    background-position -751px 0
-  .balaji span
-    width 132px
-    background-position -899px 0
-  .mark span
-    width 118px
-    background-position -1038px 0
-  .ron span
-    width 135px
-    background-position -1160px 0
+        @media screen and (max-width: 1525px)
+          height 83px
+          background-size auto 83px !important
 
+  person(width, offset)
+    width width
+    background-position offset 0
+    @media screen and (max-width: 1525px)
+      width (width / 1.5)
+      background-position (offset / 1.5) 0
+
+  .chase span
+    person(90px, 0)
+  .nate span
+    person(127px, -90px)
+  .chris span
+    person(111px, -222px)
+  .jack span
+    person(125px, -338px)
+  .diane span
+    person(119px, -470px)
+  .phil span
+    person(134px, -603px)
+  .dan span
+    person(132px, -751px)
+  .balaji span
+    person(132px, -899px)
+  .mark span
+    person(118px, -1038px)
+  .ron span
+    person(135px, -1160px)
     
+
+  .navbar-garlic .navbar-brand
+    width 39px
+    background-size cover
