@@ -2,16 +2,7 @@ $(function() {
   $(window).resize(function() {
     $('#content').height($(window).height());
   }).trigger('resize');
-});
 
-yepnope({
-	test : Modernizr.csstransforms,
-	yep: ['js/vendor/turn.min.js'],
-	nope: ['js/vendor/turn.html4.min.js'],
-	complete: loadApp
-});
-
-function loadApp() {
 	$("#moleskine").turn({
 		width: 700,
 		height: 485,
@@ -68,4 +59,4 @@ function loadApp() {
       },
     }
   });
-};
+});
