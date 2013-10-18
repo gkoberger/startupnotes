@@ -52,9 +52,11 @@ greyish = #eee
 .arrow-right
   right: -50px;
   background-position -28px 0
+  transform translateX(-25px)
 
 .arrow-left
   left: -50px;
+  transform translateX(25px)
 
 .arrow-right, .arrow-left
   display block
@@ -71,8 +73,9 @@ greyish = #eee
   &.show
     opacity 0.5
     pointer-events auto
-  &:hover
-    opacity 1
+    transform translateX(0px)
+    &:hover
+      opacity 1
 
 #body
   width 700px
