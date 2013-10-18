@@ -3,7 +3,8 @@ $(function() {
     $('#content').height($(window).height());
   }).trigger('resize');
 
-	$("#moleskine").turn({
+	var $m = $("#moleskine");
+  $m.turn({
 		width: 700,
 		height: 485,
 
@@ -42,6 +43,17 @@ $(function() {
           }
         }
 
+        $('.person').each(function() {
+          /*
+          if($(this).data('page') * 1 >= (page - 1)) {
+            $('#people').addClass('active');
+            $('#people .on').removeClass('on');
+            $(this).addClass('on');
+            return false;
+          }
+          */
+        });
+
         //updateDepth(book, page);
 
         if (page>=2)
@@ -50,13 +62,20 @@ $(function() {
           $('.moleskine .p2').removeClass('fixed');
 
         if (page<book.turn('pages'))
-          $('.moleskine .p111').addClass('fixed');
+          $('.moleskine .p' + (book.turn('pages') - 1)).addClass('fixed');
         else
-          $('.moleskine .p111').removeClass('fixed');
+          $('.moleskine .p' + (book.turn('pages') - 1)).removeClass('fixed');
 
         //Hash.go('page/'+page).update();
 
       },
     }
+  });
+
+  $('.person').click(function() {
+    $m.turn('page', $(this).data('page') * 1);
+    $('#people').addClass('active');
+    $('#people .on').removeClass('on');
+    $(this).addClass('on');
   });
 });
