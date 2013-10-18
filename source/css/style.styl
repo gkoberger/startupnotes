@@ -5,5 +5,196 @@ greyish = #eee
 *, *:before, *:after
   box-sizing border-box
 
-body
-  background-color greyish
+.pg3
+  width 344px
+  height 475px
+  background-image url(../img/demo1.png)
+.pg4
+  width 344px
+  height 475px
+  background-image url(../img/demo2.png)
+
+#content
+  background-image linear-gradient(#d15c15, #bd5110)
+  position relative
+  margin 0
+
+#body
+  width 700px
+  height 485px
+  top 50%
+  position absolute
+  margin-top -323px
+  left 50%
+  margin-left -350px
+  .info
+    width 350px
+    color #fff
+    padding 20px
+  .moleskine-parent
+    width 350px
+    left 0
+    position absolute
+    top 0
+    border-color = #262626
+    bg-color = #474747
+    shadow-color = #585656
+    .pg2
+      border-radius 12px 0 0 12px
+      border 10px solid #333
+      border-right 0 solid
+      height 100%
+      background-image linear-gradient(left, #fff 95%, #dadada 100%)
+    .inside
+      width 340px
+      height 465px
+      background-color red
+    .inside.even
+         background-image linear-gradient(left, #fff 95%, #dadada 100%)
+    .inside.odd
+         background-image linear-gradient(right, #fff 95%, #cacaca 100%)
+    */
+    .page-wrapper
+      perspective 2000px
+    .cover
+      width 350px
+      height 485px
+      border 5px solid border-color
+      background-color bg-color
+      border-radius 3px 12px 12px 3px
+      box-shadow 5px 5px 0 shadow-color inset
+      position relative
+      &:before
+        position absolute
+        top 0
+        left 25px
+        height 100%
+        width 10px
+        border-left 5px solid border-color
+        box-shadow 5px 5px 0 shadow-color inset
+        content " "
+        display block
+
+      .title
+        background-color #eee
+        width 100%
+        border-top 5px solid border-color
+        border-bottom 5px solid border-color
+        height 180px
+        top 200px
+        position relative
+      .strap
+        width 22px
+        height 492px
+        border-top 8px solid #000
+        border-bottom 8px solid #000
+        background-color #000
+        position absolute
+        right 50px
+        top -8px
+        border-radius 3px
+        &:before
+          position absolute
+          top 0
+          right -5px
+          height 475px
+          width 5px
+          border-left 5px solid rgba(0,0,0,0.3)
+          content " "
+          display block
+
+#logo
+  width 50px
+  height 50px
+  background-image url(../img/logo.png)
+  background-size contain
+h1
+  font-size 30px
+  font-family museo, serif
+  strong
+    display block
+    font-size 20px
+    font-weight normal
+    opacity 0.6
+#people
+  background-color #ddd
+  height 180px
+  position absolute
+  bottom 0
+  left 0
+  width 100%
+  #people-table
+    margin auto
+    display table
+    width 100%
+    height 114px
+    max-width 1800px
+  .person
+    cursor pointer
+    display table-cell
+    vertical-align top
+    overflow hidden
+    height 114px
+    &:hover
+      text-decoration none
+      opacity 1
+      .person-parent 
+        .person-info .name
+          color #c65614
+        span
+          margin-top -10px
+    .person-parent
+      height 180px
+      overflow hidden
+      width 100%
+      .person-info
+        height 66px
+        padding-top 20px
+        .name
+          text-align center
+          color #555
+          font-weight bold
+          font-size 13px
+        .job
+          text-align center
+          color #AAA
+          font-size 12px
+      span
+        transition 0.3s ease-out
+        image '../img/people.png'
+        height 124px
+        background-size auto 124px !important
+        display block
+        margin auto
+  .chase span
+    width 90px
+    background-position 0 0
+  .nate span
+    width 127px
+    background-position -90px 0
+  .chris span
+    width 111px
+    background-position -222px 0
+  .jack span
+    width 125px
+    background-position -338px 0
+  .diane span
+    width 119px
+    background-position -470px 0
+  .phil span
+    width 134px
+    background-position -603px 0
+  .dan span
+    width 132px
+    background-position -751px 0
+  .balaji span
+    width 132px
+    background-position -899px 0
+  .mark span
+    width 118px
+    background-position -1038px 0
+  .ron span
+    width 135px
+    background-position -1160px 0
+
+    

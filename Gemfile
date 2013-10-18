@@ -2,7 +2,7 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~><%= Middleman::VERSION %>"
+gem "middleman", "~>3.1.5"
 
 gem "therubyracer" #Less dependency
 gem "less"

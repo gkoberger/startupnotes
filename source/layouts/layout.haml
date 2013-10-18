@@ -11,8 +11,12 @@
     %title= data.page.title || "SET YOUR SITE NAME"
     %meta{:content => data.page.description || "SET YOUR SITE DESCRIPTION", :name => "description"}
     %meta{:content => "width=device-width", :name => "viewport"}
-    = javascript_include_tag "/js/vendor/modernizr-2.6.1.min"
+    = javascript_include_tag "/js/vendor/modernizr.2.5.3.min"
     = stylesheet_link_tag "all"
+
+    = javascript_include_tag "//use.typekit.net/qtu7vaw.js"
+    :javascript
+      try{Typekit.load();}catch(e){}
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     %header
