@@ -1,5 +1,6 @@
 $(window).load(function() {
   $('body').removeClass('unloaded');
+  $(window).trigger('turned');
 });
 
 function createMobile() {
@@ -55,6 +56,8 @@ $(function() {
 	var $m = $("#moleskine");
 
   function turned(dont_open) {
+    if($('body').is('.unloaded')) return;
+
     var page = $m.turn('page');
     $('.arrow-left').toggleClass('show', page > 1);
     $('.arrow-right').toggleClass('show', page < $m.turn('pages'));
@@ -63,6 +66,8 @@ $(function() {
       $('.info, .share').addClass('open');
     }
   };
+
+  $(window).bind('turned', function() { turned(false); });
 
   $m.turn({
 		width: 700,
