@@ -14,14 +14,17 @@ function createMobile() {
 
     $a.click(function(e) {
       e.preventDefault();
-      if($(this).hasClass('done')) return;
-
-      $('.page-' + name).each(function() {
-        var img = $(this).css('background-image').match(/http(.*)\.png/)[0];
-        console.log(img);
-        $a.after($('<img>', {src: img}));
-      });
-      $(this).addClass('done');
+      if($(this).hasClass('open')) {
+        $('.for'+name).remove();
+        $(this).removeClass('open');
+      } else {
+        $('.page-' + name).each(function() {
+          var img = $(this).css('background-image').match(/http(.*)\.png/)[0];
+          console.log(img);
+          $a.after($('<img>', {src: img, 'class':'for'+name}));
+        });
+        $(this).addClass('open');
+      }
     });
 
     $a.append($(this).find('.person-info'));
@@ -31,6 +34,7 @@ function createMobile() {
 }
 
 $(function() {
+  //categorizr.isMobile = true;
   $('body').toggleClass('mobile', categorizr.isMobile);
   if(categorizr.isMobile) {
     createMobile();
