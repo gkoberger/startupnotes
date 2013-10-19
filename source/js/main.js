@@ -1,6 +1,6 @@
 $(window).load(function() {
   $('body').removeClass('unloaded');
-  $(window).trigger('turned');
+  $(window).trigger('is-turned');
 });
 
 function createMobile() {
@@ -21,7 +21,6 @@ function createMobile() {
       } else {
         $('.page-' + name).each(function() {
           var img = $(this).css('background-image').match(/http(.*)\.png/)[0];
-          console.log(img);
           $a.after($('<img>', {src: img, 'class':'for'+name}));
         });
         $(this).addClass('open');
@@ -67,7 +66,7 @@ $(function() {
     }
   };
 
-  $(window).bind('turned', function() { turned(false); });
+  $(window).bind('is-turned', function() { turned(false); });
 
   $m.turn({
 		width: 700,
@@ -79,7 +78,6 @@ $(function() {
 
     when: {
       first: function() {
-        console.log('hell nah');
         $('.info').removeClass('open');
       },
       last: function() {
@@ -166,7 +164,7 @@ $(function() {
 
   $('.arrow-right').click(function(e) {
     $m.turn('next');
-    turned();
+     turned();
     e.preventDefault();
   });
 
@@ -188,7 +186,7 @@ $(function() {
 			case next:
 				$m.turn('next');
         turned();
-        $('.info, .share').addClass('open');
+        //$('.info, .share').addClass('open');
 			break;
 		}
 
