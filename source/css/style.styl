@@ -333,35 +333,89 @@ h2
           height 83px
           background-size auto 83px !important
 
-  person(width, offset)
-    width width
-    background-position offset 0
-    @media screen and (max-width: 1525px)
-      width (width / 1.5)
-      background-position (offset / 1.5) 0
+person(width, offset)
+  width width
+  background-position offset 0
+  @media screen and (max-width: 1525px)
+    width (width / 1.5)
+    background-position (offset / 1.5) 0
 
-  .chase span
-    person(90px, 0)
-  .nate span
-    person(127px, -90px)
-  .chris span
-    person(111px, -222px)
-  .jack span
-    person(125px, -338px)
-  .diane span
-    person(119px, -470px)
-  .phil span
-    person(134px, -603px)
-  .dan span
-    person(132px, -751px)
-  .balaji span
-    person(132px, -899px)
-  .mark span
-    person(118px, -1038px)
-  .ron span
-    person(135px, -1160px)
+.chase span
+  person(90px, 0)
+.nate span
+  person(127px, -90px)
+.chris span
+  person(111px, -222px)
+.jack span
+  person(125px, -338px)
+.diane span
+  person(119px, -470px)
+.phil span
+  person(134px, -603px)
+.dan span
+  person(132px, -751px)
+.balaji span
+  person(132px, -899px)
+.mark span
+  person(118px, -1038px)
+.ron span
+  person(135px, -1160px)
     
 
   .navbar-garlic .navbar-brand
     width 39px
     background-size cover
+
+.mobile
+  html, body
+    height auto
+  #people
+    display none
+  .moleskine
+    display none
+  .info, .moleskine
+    transform translateX(0) !important
+    transition 0s linear !important
+  #body
+    margin: 0;
+    left: 0;
+    top: 0;
+    position: relative;
+    width: auto;
+    height: auto;
+    .info
+      width auto
+      text-align center
+      #logo
+        margin auto
+  .share, .arrow-left, .arrow-right
+    display none
+
+  .person-info
+    background-color: #ddd;
+    border-bottom: 1px solid #bbb;
+    padding: 26px;
+    color #777
+    font-size 13px
+    .name
+      font-weight bold
+      color #333
+
+  .mobile-show img
+    max-width 100%
+    min-height 100px
+  .mini-person
+    position relative
+    display block
+    text-decoration none
+  .mini-person span
+    transition 0.3s ease-out
+    image '../img/people.png'
+    display block
+    margin auto
+    position absolute
+    right 10px
+    bottom 0px
+    height 83px
+    background-size auto 83px !important
+

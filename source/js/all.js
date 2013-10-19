@@ -3,5 +3,7 @@
 
 //= require vendor/turn.min.js
 
+//= require vendor/categorizr.js
+
 //= require plugins
 //= require main

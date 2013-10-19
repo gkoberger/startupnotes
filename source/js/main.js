@@ -2,7 +2,41 @@ $(window).load(function() {
   $('body').removeClass('unloaded');
 });
 
+function createMobile() {
+  var $ms = $('.mobile-show');
+  $('.person').each(function() {
+    var $this = $(this);
+    var name = $this.attr('class').replace(/person /, '');
+
+    var $a = $('<a>', {
+      'href': '#', 
+      'class': 'mini-person ' + name});
+
+    $a.click(function(e) {
+      e.preventDefault();
+      if($(this).hasClass('done')) return;
+
+      $('.page-' + name).each(function() {
+        var img = $(this).css('background-image').match(/http(.*)\.png/)[0];
+        console.log(img);
+        $a.after($('<img>', {src: img}));
+      });
+      $(this).addClass('done');
+    });
+
+    $a.append($(this).find('.person-info'));
+    $a.append($('<span>'));
+    $ms.append($a);
+  });
+}
+
 $(function() {
+  $('body').toggleClass('mobile', categorizr.isMobile);
+  if(categorizr.isMobile) {
+    createMobile();
+    return;
+  }
+
   $(window).resize(function() {
     $('#content').height($(window).height());
   }).trigger('resize');
