@@ -19,9 +19,11 @@ function createMobile() {
         $('.for'+name).remove();
         $(this).removeClass('open');
       } else {
+        var $imgs = $('<div>', {'class':'for'+name});
+        $a.after($imgs);
         $('.page-' + name).each(function() {
           var img = $(this).css('background-image').match(/http(.*)\.png/)[0];
-          $a.after($('<img>', {src: img, 'class':'for'+name}));
+          $imgs.append($('<img>', {src: img}));
         });
         $(this).addClass('open');
       }
