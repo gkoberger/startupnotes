@@ -400,7 +400,7 @@ person(width, offset)
       text-align center
       #logo
         margin auto
-  .share, .arrow-left, .arrow-right
+  .share, .arrow-left, .arrow-right, .jack-attack
     display none
 
   .person-info
@@ -431,3 +431,48 @@ person(width, offset)
     height 83px
     background-size auto 83px !important
 
+.jack-attack
+  text-align: center;
+  margin-top: -28px;
+  color: #fff;
+  font-size: 13px;
+  transform translateY(20px)
+  opacity 0
+  transition 0.3s ease-out
+  &.on
+    transform translateY(0)
+    opacity 1
+  a
+    color rgba(255,255,255,0.6)
+    &:hover
+      text-decoration none
+      color #fff
+
+.amazon
+  z-index 10
+  position absolute
+  border 2px solid rgba(100,100,100,0.5442)
+  text-indent -10000px
+  background-color rgba(0,0,0,0.05)
+  opacity 0
+  transition opacity 0.3s ease-out
+  &:hover
+    opacity 1
+  &.book-spirit
+    transform rotate(-2deg)
+    width 310px
+    height 110px
+    left 20px
+    top 98px
+  &.book-score
+    transform rotate(0deg)
+    width: 315px;
+    height: 150px;
+    left: 20px;
+    top: 198px;
+  &.music
+    transform rotate(0deg)
+    width: 80px;
+    height: 40px;
+    left: 10px;
+    top: 10px;

@@ -102,6 +102,8 @@ $(function() {
         currentPage = book.turn('page'),
         pages = book.turn('pages');
 
+        $('.jack-attack').toggleClass('on', page == 18 || page == 19);
+
         if (currentPage>3 && currentPage<pages-3) {
 
           if (page==1) {
