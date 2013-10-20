@@ -25,14 +25,28 @@ greyish = #eee
   background-image url(../img/cover-back.png)
   margin auto
   margin-top 90px
-.pg4
-  width 344px
-  height 475px
-  background-image url(../img/demo1.png)
-.pg5
-  width 344px
-  height 475px
-  background-image url(../img/demo2.png)
+
+.l, .r
+  width 340px
+  height 465px
+
+pager(name)
+  .page-{name}.l
+    background-image url('../img/p/'+name+'1.png')
+  .page-{name}.r
+    background-image url('../img/p/'+name+'2.png')
+
+pager(phil)
+pager(dan)
+pager(ron)
+pager(chris)
+pager(diane)
+pager(balaji)
+pager(chase)
+pager(jack)
+pager(mark)
+pager(nathan)
+
 .thankyou > div
   width 211px
   height 178px
