@@ -68,7 +68,7 @@ $(function() {
     }
   };
 
-  $(window).bind('is-turned', function() { turned(false); });
+  $(window).bind('is-turned', function() { turned(true); });
 
   $m.turn({
 		width: 700,
