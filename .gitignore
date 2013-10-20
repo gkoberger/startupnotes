@@ -14,3 +14,5 @@
 /.sass-cache
 
 config.rb
+
+.DS_STORE
