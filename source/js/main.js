@@ -1,6 +1,12 @@
+var start_on = false;
 $(window).load(function() {
   $('body').removeClass('unloaded');
   $(window).trigger('is-turned');
+  if(start_on) {
+    setTimeout(function() {
+      $('#moleskine').turn('page', start_on);
+    }, 1000);
+  }
 });
 
 function createMobile() {
@@ -70,6 +76,30 @@ $(function() {
 
   $(window).bind('is-turned', function() { turned(true); });
 
+  Hash.on('^page\/([0-9]*)$', {
+    yep: function(path, parts) {
+
+      var page = parts[1];
+
+      if (page!==undefined) {
+        if ($m.turn('is')) {
+          if(!$('body').hasClass('unloaded')) {
+            $m.turn('page', page);
+          } else {
+            start_on = page;
+          }
+        }
+      }
+
+    },
+    nop: function(path) {
+
+      if ($m.turn('is'))
+        $m.turn('page', 1);
+    }
+  });
+
+
   $m.turn({
 		width: 700,
 		height: 485,
@@ -127,6 +157,7 @@ $(function() {
           }
         }
 
+				Hash.go('page/'+page).update();
 
         // Find the highest page that's <= page+1
         
