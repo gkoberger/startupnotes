@@ -1,12 +1,14 @@
 var start_on = false;
-$(window).load(function() {
-  $('body').removeClass('unloaded');
-  $(window).trigger('is-turned');
-  if(start_on) {
-    setTimeout(function() {
-      $('#moleskine').turn('page', start_on);
-    }, 1000);
-  }
+$(window).ready(function() {
+  setTimeout(function() {
+    $('body').removeClass('unloaded');
+    $(window).trigger('is-turned');
+    if(start_on) {
+      setTimeout(function() {
+        $('#moleskine').turn('page', start_on);
+      }, 1000);
+    }
+  }, 500);
 });
 
 function createMobile() {
