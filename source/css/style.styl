@@ -456,10 +456,19 @@ person(width, offset)
     background-position (offset / 1.5) 0
 
 .mobile
+  #years
+    position relative
+    text-align center
+    background-color #98161c
+
+  overflow auto
+  height auto
   html, body
     overflow auto
     height auto
-  #people
+  .signature
+    margin auto
+  #companies
     display none
   .moleskine
     display none
@@ -485,7 +494,8 @@ person(width, offset)
   .share, .arrow-left, .arrow-right, .jack-attack
     display none
 
-  .person-info
+  h3
+    margin 0
     background-color #ddd
     border-bottom 1px solid #bbb
     padding 26px

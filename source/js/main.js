@@ -13,9 +13,9 @@ $(window).ready(function() {
 
 function createMobile() {
   var $ms = $('.mobile-show');
-  $('.person').each(function() {
+  $('.company a').each(function() {
     var $this = $(this);
-    var name = $this.attr('class').replace(/person /, '');
+    var name = $this.parent().attr('class').replace(/company /, '');
 
     var $a = $('<a>', {
       'href': '#', 
@@ -37,7 +37,7 @@ function createMobile() {
       }
     });
 
-    $a.append($(this).find('.person-info'));
+    $a.append($(this).find('h3'));
     $a.append($('<span>'));
     $ms.append($a);
   });
@@ -45,8 +45,8 @@ function createMobile() {
 
 $(function() {
   //categorizr.isMobile = true;
-  $('body').toggleClass('mobile', categorizr.isMobile);
-  if(categorizr.isMobile) {
+  $('body').toggleClass('mobile', true || categorizr.isMobile);
+  if(true || categorizr.isMobile) {
     createMobile();
     return;
   }
