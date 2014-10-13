@@ -328,6 +328,12 @@ h2
   position absolute
   bottom 0
   left 0
+  &.active
+    #company-table
+      .company
+        a
+          opacity 0.3
+
   @media screen and (max-height: 675px)
     display none
   #company-table
@@ -339,9 +345,11 @@ h2
         display block
         padding 15px 20px
         text-decoration none
-        opacity 0.5
+        transition 0.3s ease-out
+        opacity 0.8
         &:hover, &.on
           opacity 1
+          transform translateY(-7px)
         h3
           text-align center
           color #fff
