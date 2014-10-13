@@ -98,6 +98,21 @@ pager(twitch)
     &:hover
       opacity 1
 
+#years
+  position absolute
+  top 0
+  left 0
+  color rgba(255,255,255,0.3)
+  z-index 100
+  padding 17px
+  a
+    color rgba(255,255,255,0.6)
+    padding 0 5px
+    &:hover
+      text-decoration none
+      color #fff
+    strong
+      color #fff
 #body
   width 914px
   height 562px
@@ -121,7 +136,7 @@ pager(twitch)
     top 0
     p
       margin-bottom 8px
-    a
+    .social a
       display block
       color rgba(255,255,255,0.8)
       padding 5px
@@ -277,10 +292,11 @@ h2
   .readme
     color #fff
     text-decoration none
+    display inline-block
     background-image url(../img/readme.png)
     background-size contain
     background-repeat no-repeat
-    padding-left 22px
+    padding-left 27px
     margin-left 4px
     opacity 0.8
     &:hover
