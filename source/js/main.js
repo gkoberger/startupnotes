@@ -8,7 +8,7 @@ $(window).ready(function() {
         $('#moleskine').turn('page', start_on);
       }, 1000);
     }
-  }, 500);
+  }, 800);
 });
 
 function createMobile() {
