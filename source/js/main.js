@@ -177,6 +177,7 @@ $(function() {
           $p.addClass('on');
         } else {
           $('#companies').removeClass('active');
+          $('#companies .on').removeClass('on');
         }
 
         //updateDepth(book, page);
