@@ -45,8 +45,8 @@ function createMobile() {
 
 $(function() {
   //categorizr.isMobile = true;
-  $('body').toggleClass('mobile', true || categorizr.isMobile);
-  if(true || categorizr.isMobile) {
+  $('body').toggleClass('mobile', categorizr.isMobile);
+  if(categorizr.isMobile) {
     createMobile();
     return;
   }
