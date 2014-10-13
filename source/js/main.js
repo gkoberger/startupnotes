@@ -101,8 +101,8 @@ $(function() {
 
 
   $m.turn({
-		width: 700,
-		height: 485,
+		width: 914,
+		height: 562,
 
 		elevation: 50,
 		gradients: true,
@@ -131,8 +131,6 @@ $(function() {
         var book = $(this),
         currentPage = book.turn('page'),
         pages = book.turn('pages');
-
-        $('.jack-attack').toggleClass('on', page == 18 || page == 19);
 
         if (currentPage>3 && currentPage<pages-3) {
 
@@ -164,7 +162,7 @@ $(function() {
         var $p;
         var page_rounded = (Math.floor(page / 2) * 2) + 1; // Get the right page
         if(page_rounded < book.turn('pages') - 1) {
-          $('.person').each(function() {
+          $('.company a').each(function() {
             if($(this).data('page') * 1 <= page_rounded) {
               $p = $(this);
             }
@@ -172,11 +170,11 @@ $(function() {
         }
 
         if($p) {
-          $('#people').addClass('active');
-          $('#people .on').removeClass('on');
+          $('#companies').addClass('active');
+          $('#companies .on').removeClass('on');
           $p.addClass('on');
         } else {
-          $('#people').removeClass('active');
+          $('#companies').removeClass('active');
         }
 
         //updateDepth(book, page);
@@ -227,11 +225,12 @@ $(function() {
 
 	});
 
-  $('.person').click(function() {
+  $('#companies .company a').click(function(e) {
+    e.preventDefault();
     turned();
     $m.turn('page', $(this).data('page') * 1);
-    $('#people').addClass('active');
-    $('#people .on').removeClass('on');
+    $('#companies').addClass('active');
+    $('#companies .on').removeClass('on');
     $(this).addClass('on');
   });
 });

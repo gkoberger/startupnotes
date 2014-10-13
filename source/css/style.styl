@@ -5,6 +5,9 @@ greyish = #eee
 *, *:before, *:after
   box-sizing border-box
 
+body
+  overflow hidden
+
 .unloaded
   .moleskine-parent
     transform translateY(-100px)
@@ -22,50 +25,58 @@ greyish = #eee
 .pg3
   width 210px
   height 224px
-  background-image url(../img/cover-back.png)
+  image '../img/cover-back.png' 210px 224px
   margin auto
   margin-top 90px
 
 .l, .r
-  width 340px
-  height 465px
+  width 447px
+  height 542px
 
 pager(name)
   .page-{name}.l
-    background-image url('../img/p/'+name+'1.png')
+    background-image linear-gradient(to right, rgba(0,0,0,0) 95%, rgba(0,0,0,0.08) 100%), url('../img/pages/'+name+'1.png')
+    background-size 447px 542px
+    @media (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all, (min-resolution: 138dpi), (min-resolution: 1.5dppx)
+      background-image linear-gradient(to right, rgba(0,0,0,0) 95%, rgba(0,0,0,0.08) 100%), url('../img/pages/'+name+'1@2x.png')
   .page-{name}.r
-    background-image url('../img/p/'+name+'2.png')
+    background-image linear-gradient(to left, rgba(0,0,0,0) 95%, rgba(0,0,0,0.08) 100%), url('../img/pages/'+name+'2.png')
+    background-size 447px 542px
+    @media (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all, (min-resolution: 138dpi), (min-resolution: 1.5dppx)
+      background-image linear-gradient(to left, rgba(0,0,0,0) 95%, rgba(0,0,0,0.08) 100%), url('../img/pages/'+name+'2@2x.png')
 
-pager(phil)
-pager(dan)
-pager(ron)
-pager(chris)
-pager(diane)
-pager(balaji)
-pager(chase)
-pager(jack)
-pager(mark)
-pager(nathan)
+pager(svangel)
+pager(indiegogo)
+pager(instagram)
+pager(linkedin)
+pager(whatsapp)
+pager(pebble)
+pager(groupon)
+pager(cloudflare)
+pager(jawbone)
+pager(twitch)
 
 .thankyou > div
   width 211px
   height 178px
-  background-image url(../img/back-thanks.png)
+  image '../img/back-thanks.png' 211px 178px
   margin auto
   margin-top 110px
 
 #content
-  background-image linear-gradient(#d15c15, #bd5110)
+  background-image linear-gradient(rgba(191, 44, 43, 0.95), rgba(246, 149, 82, 0.95)), url(../img/bg.jpg)
+  background-size cover
+  background-position center center
   position relative
   margin 0
 
 .arrow-right
-  right: -50px;
+  right -50px
   background-position -28px 0
   transform translateX(-25px)
 
 .arrow-left
-  left: -50px;
+  left -50px
   transform translateX(25px)
 
 .arrow-right, .arrow-left
@@ -88,19 +99,19 @@ pager(nathan)
       opacity 1
 
 #body
-  width 700px
-  height 485px
+  width 914px
+  height 562px
   top 50%
   position absolute
-  margin-top -323px
+  margin-top -327px
   @media screen and (max-height: 675px)
     margin-top -285px
   left 50%
-  margin-left -350px
+  margin-left -457px
   hr
     border-top 1px solid rgba(255,255,255,0.3)
   .share
-    width 350px
+    width 450px
     color #fff
     padding 100px 50px
     position relative
@@ -124,12 +135,13 @@ pager(nathan)
     &.open
       z-index 0
   .info
-    width 350px
+    width 450px
     color #fff
-    padding 20px 40px 20px 20px
+    padding 90px 40px 20px 20px
     position relative
     transition transform 0.5s ease-out
     z-index 20
+    font-size 16px
     &.open
       position static
       z-index 0
@@ -149,8 +161,8 @@ pager(nathan)
       height 100%
       background-image linear-gradient(right, #fff 95%, #dadada 100%)
     .back-outside > div
-      width 350px
-      height 485px
+      width 457px
+      height 562px
       border 5px solid border-color
       background-color bg-color
       border-radius 12px 3px 3px 12px
@@ -171,12 +183,12 @@ pager(nathan)
         width 100%
         border-top 5px solid border-color
         border-bottom 5px solid border-color
-        height 180px
-        top 200px
+        height 200px
+        top 240px
         position relative
     .inside
-      width 340px
-      height 465px
+      width 447px
+      height 542px
     .inside.even
          background-image linear-gradient(left, #fff 95%, #dadada 100%)
     .inside.odd
@@ -189,8 +201,8 @@ pager(nathan)
         cursor -webkit-grabbing
         cursor -moz-grabbing
     .cover
-      width 350px
-      height 485px
+      width 457px
+      height 562px
       border 5px solid border-color
       background-color bg-color
       border-radius 3px 12px 12px 3px
@@ -212,12 +224,12 @@ pager(nathan)
         width 100%
         border-top 5px solid border-color
         border-bottom 5px solid border-color
-        height 180px
-        top 200px
+        height 200px
+        top 240px
         position relative
       .strap
         width 22px
-        height 492px
+        height 565px
         border-top 8px solid #000
         border-bottom 8px solid #000
         background-color #000
@@ -229,7 +241,7 @@ pager(nathan)
           position absolute
           top 0
           right -5px
-          height 475px
+          height 557px
           width 5px
           border-left 5px solid rgba(0,0,0,0.3)
           content " "
@@ -252,22 +264,100 @@ h2
   font-size 25px
 
 .byline
+  font-size 16px
   color rgba(255,255,255,0.6)
-  font-size 14px
-  a
-    display inline-block !important
-    color rgba(255,255,255,0.6)
+  .signature
+    image '../img/signature.png' 195px 39px
+    background-repeat no-repeat
+    display block
+    width 195px
+    height 39px
+    text-indent -90000px
+    margin-top 15px
+  .readme
+    color #fff
     text-decoration none
+    background-image url(../img/readme.png)
+    background-size contain
+    background-repeat no-repeat
+    padding-left 22px
+    margin-left 4px
+    opacity 0.8
     &:hover
-      color #fff
-    &.hire
-      padding-left 14px
+      opacity 1
+  .social
+    border-top 1px solid rgba(255,255,255,0.3)
+    padding-top 10px
+    margin-top 10px
+    a
+      display inline-block !important
+      color rgba(255,255,255,0.6)
+      text-decoration none
+      font-size 18px
+      padding-right 8px
+      strong
+        padding-left 5px
+        font-size 13px
+      &:hover
+        color #fff
+      &.hire
+        padding-left 14px
+
+#companies
+  display table
+  width 100%
+  position absolute
+  bottom 0
+  left 0
+  #company-table
+    display table-row
+    .company
+      display table-cell
+      width 10%
+      a
+        display block
+        padding 15px 20px
+        text-decoration none
+        opacity 0.5
+        &:hover, &.on
+          opacity 1
+        h3
+          text-align center
+          color #fff
+          font-size 12px
+          font-weight normal
+        span
+          height 30px
+          display block
+          background-repeat no-repeat
+          background-size contain
+          background-position center center
+          background-image url(../img/logo-temp.png)
+      &.groupon span
+        background-image url(../img/logos/groupon.png)
+      &.svangel span
+        background-image url(../img/logos/svangel.png)
+      &.cloudflare span
+        background-image url(../img/logos/cloudflare.png)
+      &.jawbone span
+        background-image url(../img/logos/jawbone.png)
+      &.twitch span
+        background-image url(../img/logos/twitch.png)
+      &.indiegogo span
+        background-image url(../img/logos/indiegogo.png)
+      &.instagram span
+        background-image url(../img/logos/instagram.png)
+      &.linkedin span
+        background-image url(../img/logos/linkedin.png)
+      &.whatsapp span
+        background-image url(../img/logos/whatsapp.png)
+      &.pebble span
+        background-image url(../img/logos/pebble.png)
 
 #people
-  background-color #ddd
-  height 180px
+  height 130px
   @media screen and (max-width: 1525px)
-    height 138px
+    height 110px
   @media screen and (max-height: 675px)
     height 78px
   @media screen and (max-width: 1050px)
@@ -300,10 +390,8 @@ h2
       .person-parent 
         .person-info .name
           color #c65614
-        span
-          margin-top -5px
     .person-parent
-      height 180px
+      height 58px
       overflow hidden
       width 100%
       @media screen and (max-width: 1525px)
@@ -314,7 +402,7 @@ h2
         height 78px
 
       .person-info
-        height 66px
+        height 46px
         padding-top 20px
         @media screen and (max-width: 1050px)
           display none
@@ -341,7 +429,7 @@ h2
         display block
         margin auto
         @media screen and (max-width: 1525px)
-          height 83px
+          height 53px
           background-size auto 83px !important
 
 person(width, offset)
@@ -351,34 +439,9 @@ person(width, offset)
     width (width / 1.5)
     background-position (offset / 1.5) 0
 
-.chase span
-  person(90px, 0)
-.nathan span
-  person(127px, -90px)
-.chris span
-  person(111px, -222px)
-.jack span
-  person(125px, -338px)
-.diane span
-  person(119px, -470px)
-.phil span
-  person(134px, -603px)
-.dan span
-  person(132px, -751px)
-.balaji span
-  person(132px, -899px)
-.mark span
-  person(118px, -1036px)
-.ron span
-  person(135px, -1160px)
-    
-
-  .navbar-garlic .navbar-brand
-    width 39px
-    background-size cover
-
 .mobile
   html, body
+    overflow auto
     height auto
   #people
     display none
@@ -390,24 +453,26 @@ person(width, offset)
   .info
     padding 20px !important
   #body
-    margin: 0;
-    left: 0;
-    top: 0;
-    position: relative;
-    width: auto;
-    height: auto;
+    margin 0
+    left 0
+    top 0
+    position relative
+    width auto
+    height auto
     .info
       width auto
       text-align center
+      p 
+        line-height 1.5em
       #logo
         margin auto
   .share, .arrow-left, .arrow-right, .jack-attack
     display none
 
   .person-info
-    background-color: #ddd;
-    border-bottom: 1px solid #bbb;
-    padding: 26px;
+    background-color #ddd
+    border-bottom 1px solid #bbb
+    padding 26px
     color #777
     font-size 13px
     .name
@@ -437,10 +502,10 @@ person(width, offset)
     right 14px
 
 .jack-attack
-  text-align: center;
-  margin-top: -28px;
-  color: #fff;
-  font-size: 13px;
+  text-align center
+  margin-top -28px
+  color #fff
+  font-size 13px
   transform translateY(20px)
   opacity 0
   transition 0.3s ease-out
@@ -471,16 +536,16 @@ person(width, offset)
     top 98px
   &.book-score
     transform rotate(0deg)
-    width: 315px;
-    height: 150px;
-    left: 20px;
-    top: 198px;
+    width 315px
+    height 150px
+    left 20px
+    top 198px
   &.music
     transform rotate(0deg)
-    width: 80px;
-    height: 40px;
-    left: 10px;
-    top: 10px;
+    width 80px
+    height 40px
+    left 10px
+    top 10px
 
 .buy
   margin-top 20px
