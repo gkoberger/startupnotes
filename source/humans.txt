@@ -3,7 +3,8 @@
 
 # TEAM
 
-    Gregory Koberger -- @twitter 
+    Gregory Koberger -- @gkoberger
+    Kim Pham - @kimpham404
 
 # TECHNOLOGY COLOPHON
 
