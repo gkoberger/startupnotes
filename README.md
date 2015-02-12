@@ -1,5 +1,5 @@
 # Startup Notes
-Digital notes and doodles from Y-Combinator's 2015 [Female Founders Conference](http://www.femalefoundersconference.org/) . This is part of a series of [Startup Notes](http://startupnotes.org/) by [Gregory Koberger](http://gkoberger.net/).
+Digital notes and doodles from Y-Combinator's 2015 [Female Founders Conference](http://www.femalefoundersconference.org/) . This is part of the [Startup Notes](http://startupnotes.org/) series by [Gregory Koberger](http://gkoberger.net/). These notes were created in collaboration with [Kim Pham](https://twitter.com/kimpham404)
 
 The speakers included:
 * [**Jessica Livingston**](http://www.foundersatwork.com/author.html) - Founder, [Y Combinator](http://www.ycombinator.com/) and Author, [Founders at Work](http://amzn.to/1IX95m3)
