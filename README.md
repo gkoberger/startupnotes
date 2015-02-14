@@ -30,16 +30,14 @@ This is an open source project to create digital notes for all Y Combinator star
 Create a local clone of your fork using your SSH URL of the forked repo  
 ```git clone git@github.com:YOURGITHUBUSERNAME/startupnotes.git```
 
-Make sure you have **Ruby 1.9.3 or higher** installed  
+Make sure you have **Ruby 1.9.3 or higher** installed. If not, you can follow these [instructions](https://www.ruby-lang.org/en/documentation/installation/) to install Ruby.  
 ```ruby -v```  
-If not, you can follow these [instructions](https://www.ruby-lang.org/en/documentation/installation/) to install Ruby
 
 Install Ruby gems  
 ```bundle install```
 
-Check if you have Node.js installed.  
+Check if you have Node.js installed. If not, you can follow these [instructions](https://academy.appgyver.com/installwizard/steps#/install-nvm) to install Node.js  
 ```node -v```  
-If not, you can follow these [instructions](https://academy.appgyver.com/installwizard/steps#/install-nvm) to install Node.js
 
 Install nib  
  ```npm install nib```
