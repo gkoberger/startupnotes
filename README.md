@@ -27,26 +27,28 @@ This is an open source project to create digital notes for all Y Combinator star
 
 [Fork on Github](https://github.com/gkoberger/startupnotes/fork)
 
-Create a local clone of your fork
-```git clone git@github.com:YOURUSERNAME/startupnotes.git```
+Create a local clone of your fork using your SSH URL of the forked repo  
+```git clone git@github.com:YOURGITHUBUSERNAME/startupnotes.git```
 
-Make sure you have **Ruby 1.9.3+**
-```ruby -v```
+Make sure you have **Ruby 1.9.3 or higher** installed  
+```ruby -v```  
+If not, you can follow these [instructions](https://www.ruby-lang.org/en/documentation/installation/) to install Ruby
 
-Install Ruby gems
+Install Ruby gems  
 ```bundle install```
 
-Check if you have node installed. If not, you can follow these [instructions](https://academy.appgyver.com/installwizard/steps#/install-nvm)
-```node -v```
+Check if you have Node.js installed.  
+```node -v```  
+If not, you can follow these [instructions](https://academy.appgyver.com/installwizard/steps#/install-nvm) to install Node.js
 
-Install nib
-```npm install nib```
+Install nib  
+ ```npm install nib```
 
-Run the site locally using middleman
-```bundle exec middleman server```
+Start the server locally using middleman  
+ ```bundle exec middleman server```
 
-View the site locally in your browser
-```http://localhost:4567```
+View the site locally in your browser  
+[http://localhost:4567](http://localhost:4567)
 
 
 ## Contributors
