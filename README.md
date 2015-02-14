@@ -1,9 +1,9 @@
 # Startup Notes
 
 ## About
-Digital notes and doodles from Y-Combinator's 2015 [Female Founders Conference](http://www.femalefoundersconference.org/) . This is part of the [Startup Notes](http://startupnotes.org/) series by [Gregory Koberger](http://gkoberger.net/). These notes were created in collaboration with [Kim Pham](https://twitter.com/kimpham404)
+[Startup Notes](http://startupnotes.org/) are a series of digital notes and doodles of Y Combinator's startup schools, originally created by [Gregory Koberger](http://gkoberger.net/). The [Female Founders Conference](http://www.femalefoundersconference.org/) notes were created in collaboration with [Kim Pham](https://twitter.com/kimpham404). We have since turned this into an open source project, and welcome contributors to create digital notes for all past Y Combinator startup schools.
 
-The speakers included:
+Speakers at the 2015 Female Founders Conference:
 * [**Jessica Livingston**](http://www.foundersatwork.com/author.html) - Founder, [Y Combinator](http://www.ycombinator.com/) and Author, [Founders at Work](http://amzn.to/1IX95m3)
 * [**Adora Cheung**](http://www.femalefounderstories.com/adora-cheung.html) - Founder, [Homejoy](https://www.homejoy.com/)
 * [**Grace Garey**](http://www.femalefounderstories.com/grace-garey.html) - Founder, [Watsi](https://watsi.org/)
@@ -16,8 +16,8 @@ The speakers included:
 
 ## Interested in contributing?
 
-This is an open source project to create digital notes for all Y Combinator startup schools:
-* Startup School Silicon Valley - 2008, 2009, 2010, 2011, 2012, 2013, 2014
+[Startup Notes](http://startupnotes.org/) is an open source project to create digital notes for all Y Combinator startup schools:
+* Startup School Silicon Valley - 2008, 2009, 2010, 2011, 2012, [2013](http://2013.startupnotes.org/), 2014
 * Startup School New York - 2014
 * Startup School Europe - 2014
 * Female Founder's Conference - 2014, 2015
