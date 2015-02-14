@@ -1,4 +1,6 @@
 # Startup Notes
+
+## About
 Digital notes and doodles from Y-Combinator's 2015 [Female Founders Conference](http://www.femalefoundersconference.org/) . This is part of the [Startup Notes](http://startupnotes.org/) series by [Gregory Koberger](http://gkoberger.net/). These notes were created in collaboration with [Kim Pham](https://twitter.com/kimpham404)
 
 The speakers included:
@@ -9,4 +11,46 @@ The speakers included:
 * [**Tracy Young**](http://www.femalefounderstories.com/tracy-young.html) - Founder, [PlanGrid](http://www.plangrid.com/)
 * **Kimberly Bryant** - Founder, [Black Girls Code](http://www.blackgirlscode.com/)
 * **Ruchi Sanghvi** - Founder, Cove (acquired by [Dropbox](https://www.dropbox.com/)); First female engineer at [Facebook](https://www.facebook.com/)
+
+------
+
+## Interested in contributing?
+
+This is an open source project to create digital notes for all Y Combinator startup schools:
+* Startup School Silicon Valley - 2008, 2009, 2010, 2011, 2012, 2013, 2014
+* Startup School New York - 2014
+* Startup School Europe - 2014
+* Female Founder's Conference - 2014, 2015
+* Sam Altman's [How to Start a Startup](http://startupclass.samaltman.com/)
+
+### Installation
+
+[Fork on Github](https://github.com/gkoberger/startupnotes/fork)
+
+Create a local clone of your fork
+```git clone git@github.com:YOURUSERNAME/startupnotes.git```
+
+Make sure you have **Ruby 1.9.3+**
+```ruby -v```
+
+Install Ruby gems
+```bundle install```
+
+Check if you have node installed. If not, you can follow these [instructions](https://academy.appgyver.com/installwizard/steps#/install-nvm)
+```node -v```
+
+Install nib
+```npm install nib```
+
+Run the site locally using middleman
+```bundle exec middleman server```
+
+View the site locally in your browser
+```http://localhost:4567```
+
+
+## Contributors
+
+* [**Gregory Koberger**](http://gkoberger.net)
+* [**Kim Pham**](http://github.com/kixton)
 
