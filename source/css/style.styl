@@ -292,6 +292,28 @@ h2
     height 39px
     text-indent -90000px
     margin-top 15px
+  .full
+    width 100%
+    font-size 1px
+  a.a-social
+    color rgba(255,255,255,0.4)
+    &:hover
+      color rgba(#fff, 0.9)
+      text-decoration none
+  a.hire
+    color rgba(255,255,255,0.6)
+    &:hover
+      color rgba(#fff, 0.9)
+      text-decoration none
+  .signature-kim
+    image '../img/signature-kim.png' 135px 39px
+    background-repeat no-repeat
+    display block
+    width 135px
+    height 39px
+    text-indent -90000px
+    margin-right 20px
+    margin-top 15px
   .readme
     color #fff
     text-decoration none
@@ -355,9 +377,14 @@ h2
         h3
           text-align center
           color #fff
-          font-size 14px
+          font-size 13px
           font-weight normal
-          height 30px
+          height 19px
+          white-space nowrap
+          text-overflow ellipsis
+          max-width 121px
+          overflow hidden
+          margin auto
         span
           height 30px
           display block
