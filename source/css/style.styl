@@ -45,16 +45,15 @@ pager(name)
     @media (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all, (min-resolution: 138dpi), (min-resolution: 1.5dppx)
       background-image linear-gradient(to left, rgba(0,0,0,0) 95%, rgba(0,0,0,0.08) 100%), url('../img/pages/'+name+'2@2x.png')
 
-pager(svangel)
-pager(indiegogo)
-pager(instagram)
-pager(linkedin)
-pager(whatsapp)
-pager(pebble)
-pager(groupon)
-pager(cloudflare)
-pager(jawbone)
-pager(twitch)
+pager(jessica)
+pager(tracy)
+pager(kimberly)
+pager(olga)
+pager(ruchi)
+pager(danielle)
+pager(fundraising)
+pager(adora)
+pager(grace)
 
 .thankyou > div
   width 211px
@@ -64,7 +63,7 @@ pager(twitch)
   margin-top 110px
 
 #content
-  background-image linear-gradient(rgba(191, 44, 43, 0.95), rgba(246, 149, 82, 0.95)), url(../img/bg.jpg)
+  background-image linear-gradient(rgba(182, 40, 103, 0.95), rgba(253, 121, 11, 0.95)), url(../img/bg.jpg)
   background-size cover
   background-position center center
   position relative
@@ -284,6 +283,8 @@ h2
 .byline
   font-size 16px
   color rgba(255,255,255,0.6)
+  .mobile &
+    display none
   .signature
     image '../img/signature.png' 195px 39px
     background-repeat no-repeat
@@ -291,6 +292,28 @@ h2
     width 195px
     height 39px
     text-indent -90000px
+    margin-top 15px
+  .full
+    width 100%
+    font-size 1px
+  a.a-social
+    color rgba(255,255,255,0.4)
+    &:hover
+      color rgba(#fff, 0.9)
+      text-decoration none
+  a.hire
+    color rgba(255,255,255,0.6)
+    &:hover
+      color rgba(#fff, 0.9)
+      text-decoration none
+  .signature-kim
+    image '../img/signature-kim.png' 135px 39px
+    background-repeat no-repeat
+    display block
+    width 135px
+    height 39px
+    text-indent -90000px
+    margin-right 20px
     margin-top 15px
   .readme
     color #fff
@@ -308,6 +331,8 @@ h2
     border-top 1px solid rgba(255,255,255,0.3)
     padding-top 10px
     margin-top 10px
+    .product-hunt
+      margin-top 15px
     a
       display inline-block !important
       color rgba(255,255,255,0.6)
@@ -353,35 +378,39 @@ h2
         h3
           text-align center
           color #fff
-          font-size 12px
+          font-size 13px
           font-weight normal
+          height 19px
+          white-space nowrap
+          text-overflow ellipsis
+          max-width 121px
+          overflow hidden
+          margin auto
         span
           height 30px
           display block
           background-repeat no-repeat
           background-size contain
           background-position center center
-          background-image url(../img/logo-temp.png)
-      &.groupon span
-        background-image url(../img/logos/groupon.png)
-      &.svangel span
-        background-image url(../img/logos/svangel.png)
-      &.cloudflare span
-        background-image url(../img/logos/cloudflare.png)
-      &.jawbone span
-        background-image url(../img/logos/jawbone.png)
-      &.twitch span
-        background-image url(../img/logos/twitch.png)
-      &.indiegogo span
-        background-image url(../img/logos/indiegogo.png)
-      &.instagram span
-        background-image url(../img/logos/instagram.png)
-      &.linkedin span
-        background-image url(../img/logos/linkedin.png)
-      &.whatsapp span
-        background-image url(../img/logos/whatsapp.png)
-      &.pebble span
-        background-image url(../img/logos/pebble.png)
+          background-image url(../img/logos/ycombinator.png)
+      &.jessica span
+        background-image url(../img/logos/ycombinator.png)
+      &.tracy span
+        background-image url(../img/logos/plangrid.png)
+      &.kimberly span
+        background-image url(../img/logos/blackgirlscode.png)
+      &.olga span
+        background-image url(../img/logos/shoptiques.png)
+      &.ruchi span
+        background-image url(../img/logos/cove.png)
+      &.danielle span
+        background-image url(../img/logos/mattermark.png)
+      &.fundraising span
+        background-image url(../img/logos/ycombinator.png)
+      &.adora span
+        background-image url(../img/logos/homejoy.png)
+      &.grace span
+        background-image url(../img/logos/watsi.png)
 
 #people
   height 130px
