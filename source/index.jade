@@ -1,0 +1,187 @@
+extends layout
+
+block content
+  #years
+    a(href='http://ffc2015.startupnotes.org')
+      strong FFC 2015
+    |     ·
+    a(href='http://2014.startupnotes.org') 2014
+    |     ·
+    a(href='http://2013.startupnotes.org') 2013
+    |     ·
+    a(href='http://gkoberger.net/m/startup-school') 2011
+  #content
+    #body
+      a.arrow-left(href='#')
+      a.arrow-right(href='#')
+      .info
+        #logo
+        h1
+          | Startup Notes 
+          strong 2015 Female Founders Conference
+        p
+          | On February 21, 2015, Y Combinator invited amazing female founders to tell their stories. Here are doodle notes of the most inspirational and actionable advice from each speaker. Enjoy, and good luck building!
+        .byline
+          table
+            tr
+              td
+                .signature By Gregory Koberger
+                |                  Founder, 
+                a.readme(href='http://readme.io', target='_blank') ReadMe.io
+                div
+                  a.a-social.icon-twitter(href='https://twitter.com/gkoberger', target='_blank')  @gkoberger
+              td.full  
+              td
+                .signature-kim By Kim Pham
+                a.hire(href='mailto:ms.kimpham@gmail.com')
+                  i.icon-envelope
+                  |  Hire me!
+                div
+                  a.a-social.icon-twitter(href='https://twitter.com/kimpham404', target='_blank')  @kimpham404
+          .social(style='display:none;')
+            a.product-hunt(href='https://producthunt.com', target='_blank') Join the conversation on Product Hunt
+        hr
+        a.buy(href='http://ffcposter.myshopify.com/', target='_blank')
+          | Buy a FFC Poster & Support Black Girls CODE
+      .share.open
+        a.buy(href='http://ffcposter.myshopify.com/', target='_blank')
+          strong Inspired? Buy FFC Poster &
+          br
+          |           Support Black Girls CODE
+        hr
+        h2 Share Startup Notes
+        p Like Startup Notes? Tell your friends!
+        .social
+          a(href="https://twitter.com/intent/tweet?source=webclient&text=Doodle+notes+from+@ycombinator's+2015+Female+Founders+Conference+http://startupnotes.org+(By+@gkoberger+and+@kimpham404)&a=", target='_blank')
+            i.icon-twitter
+            |  Share on Twitter
+          a(href='http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://startupnotes.org&p[images][0]=http://startupschool.org/img/fb.png&p[title]=Startup%20School%202014%20Notes&p[summary]=', target='_blank')
+            i.icon-facebook
+            |  Share on Facebook
+          a(href='https://github.com/gkoberger/startupnotes', target='_blank')
+            i.icon-github
+            |  Fork on GitHub
+        hr
+        .byline
+          div
+            strong(style='color: #fff') Want to see more by Greg?
+          div
+            | Check out his startup,
+            a.readme(href='http://readme.io', target='_blank') ReadMe.io
+            | !
+          .social(style='display:none;')
+            a.icon-twitter(href='http://twitter.com/gkoberger', target='_new')
+            a.icon-github(href='http://github.com/gkoberger', target='_new')
+            a.icon-dribbble(href='http://dribbble.com/gkoberger', target='_new')
+            a.hire(href='mailto:gkoberger@gmail.com?subject=Startup Notes!')
+              i.icon-envelope
+              strong Say hi!
+        hr
+        .byline
+          div
+            strong(style='color: #fff') Want to see more by Kim?
+          div
+            | Then you should  
+            a.icon-envelope.hire(href='mailto:ms.kimpham@gmail.com')
+              strong hire her
+              | !
+          .social(style='display:none;')
+            a.icon-twitter(href='http://twitter.com/gkoberger', target='_new')
+            a.icon-github(href='http://github.com/gkoberger', target='_new')
+            a.icon-dribbble(href='http://dribbble.com/gkoberger', target='_new')
+            a.hire(href='mailto:gkoberger@gmail.com?subject=Startup Notes!')
+              i.icon-envelope
+              strong Say hi!
+      .moleskine-parent
+        #moleskine.moleskine
+          .hard.cover-hard(depth='5')
+            .cover
+              .title
+              .strap
+          .hard
+            .pg2
+              div
+          .inside.own-size
+            .pg3
+          .inside.own-size
+            .page-jessica.l
+          .inside.own-size
+            .page-jessica.r
+          .inside.own-size
+            .page-tracy.l
+          .inside.own-size
+            .page-tracy.r
+          .inside.own-size
+            .page-kimberly.l
+          .inside.own-size
+            .page-kimberly.r
+          .inside.own-size
+            .page-olga.l
+          .inside.own-size
+            .page-olga.r
+          .inside.own-size
+            .page-ruchi.l
+          .inside.own-size
+            .page-ruchi.r
+          .inside.own-size
+            .page-danielle.l
+          .inside.own-size
+            .page-danielle.r
+          .inside.own-size
+            .page-fundraising.l
+          .inside.own-size
+            .page-fundraising.r
+          .inside.own-size
+            .page-adora.l
+          .inside.own-size
+            .page-adora.r
+          .inside.own-size
+            .page-grace.l
+          .inside.own-size
+            .page-grace.r
+          .inside.own-size  
+          .hard.back-inside.fixed
+            .thankyou
+              div
+          .hard.back-outside
+            div
+              .title
+    #companies
+      #company-table
+        .company.jessica
+          a(href='#', data-page='4')
+            h3 Jessica Livingston
+            span
+        .company.tracy
+          a(href='#', data-page='6')
+            h3 Tracy Young
+            span
+        .company.kimberly
+          a(href='#', data-page='8')
+            h3 Kimberly Bryant
+            span
+        .company.olga
+          a(href='#', data-page='10')
+            h3 Olga Vidisheva
+            span
+        .company.ruchi
+          a(href='#', data-page='12')
+            h3 Ruchi Sanghvi
+            span
+        .company.danielle
+          a(href='#', data-page='14')
+            h3 Danielle Morrill
+            span
+        .company.fundraising
+          a(href='#', data-page='16')
+            h3 Fundraising Panel
+            span
+        .company.adora
+          a(href='#', data-page='18')
+            h3 Adora Cheung
+            span
+        .company.grace
+          a(href='#', data-page='20')
+            h3 Grace Garey
+            span
+  .mobile-show

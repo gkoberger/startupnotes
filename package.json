@@ -1,0 +1,30 @@
+{
+  "name": "big-gulp",
+  "version": "0.0.1",
+  "description": "Static site generator using gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gkoberger/big-gulp"
+  },
+  "author": "Gregory Koberger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkoberger/big-gulp/issues"
+  },
+  "homepage": "https://github.com/gkoberger/big-gulp",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-concat": "^2.2.0",
+    "gulp-connect": "^2.0.5",
+    "gulp-filter": "^0.5.0",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-jade": "^0.6.1",
+    "gulp-stylus": "^1.0.2",
+    "gulp-uglify": "^0.3.1",
+    "nib": "^1.0.3"
+  }
+}

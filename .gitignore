@@ -17,3 +17,6 @@ config.rb
 
 .DS_STORE
 source/img/assets/
+
+node_modules/*
+bower_components/*
